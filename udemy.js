@@ -4,18 +4,18 @@ function placeanOrder(order) {
   cookAndDeliverFood(order, function (customer) {
     console.log("Deliver Food for : ", customer);
   });
+}
 
-  function cookAndDeliverFood(order, callback) {
-    var customer = {
-      order: order,
-      _: `Customer ${order}`,
-    };
+function cookAndDeliverFood(order, callback) {
+  var customer = {
+    order: order,
+    _: `Customer ${order}`,
+  };
 
-    // setTimeout(callback(customer), 3000);
-    setTimeout(function () {
-      callback(customer);
-    }, 3000);
-  }
+  // setTimeout(callback(customer), 3000);
+  setTimeout(function () {
+    callback(customer);
+  }, 3000);
 }
 
 placeanOrder(1);
